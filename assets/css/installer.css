@@ -1,0 +1,309 @@
+/*
+================
+    OVERALL
+================
+*/
+
+body {
+    color: #444;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #0087ff;
+}
+
+a:hover, a:active {
+    color: #004c98;
+}
+
+/* disabled style for white button */
+button:disabled {
+    color: #AAA;
+    border-color: #AAA;
+}
+
+/* danger button style */
+button.button-danger {
+    color: #FFF;
+    background-color: #aa1317;
+    border-color: #aa1317;
+}
+
+button.button-danger:hover {
+    color: #FFF;
+    background-color: #6c1013;
+    border-color: #6c1013;
+}
+
+button.button-danger:focus {
+    color: #FFF;
+    background-color: #821013;
+    border-color: #821013;
+}
+
+button.button-danger:disabled {
+    color: #FFF;
+    background-color: #F9BBC4;
+    border-color: #F9BBC4;
+}
+
+/* standard button style */
+button.button-standard {
+    color: #FFF;
+    background-color: #0087ff;
+    border-color: #0087ff;
+}
+
+button.button-standard:hover {
+    color: #FFF;
+    background-color: #004c98;
+    border-color: #004c98;
+}
+
+button.button-standard:focus {
+    color: #FFF;
+    background-color: #0087ff;
+    border-color: #0087ff;
+}
+
+button.button-standard:disabled {
+    color: #FFF;
+    background-color: #8ad2ff;
+    border-color: #8ad2ff;
+}
+
+/*
+================
+     HEADER
+================
+*/
+
+.header {
+    box-sizing: border-box;
+    background: #0087ff;
+    height: 60px;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 300;
+    color: #fafafa;
+    line-height: 1.5;
+}
+
+/*
+================
+    SIDEBAR
+================
+*/
+
+/* sidebar tabs */
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.installation-steps {
+    padding: 20px 20px 0 20px;
+}
+
+.installation-steps h6 {
+    padding: 15% 2px 15% 0;
+    font-size: 1.7rem;
+}
+
+.hats-steps {
+    padding: 2px 10px 2px 20px;
+}
+
+.hats-steps.not-done h6 {
+    color: #bbb;
+}
+
+.hats-steps.completed h6 {
+    color: #bbb;
+}
+
+/* circle for sidebar */
+
+.circle {
+    background-color: #0087ff;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    display: block;
+    float: left;
+    margin: 0 10px;
+}
+
+.not-done .circle {
+    background: #999;
+}
+
+.hats-steps h6 {
+    font-size: 1.8rem;
+    padding-top: 2px;
+    padding-left: 60px;
+}
+
+
+/* version number */
+.version {
+    position: fixed;
+    font-weight: lighter;
+    bottom: 5px;
+    left: 10px;
+    color: #bbb;
+}
+
+/*
+==================
+   MAIN CONTENT
+==================
+*/
+
+.main-content {
+    padding-top: 10%;
+}
+
+p {
+    font-size: 1.65rem;
+}
+
+/* buttons */
+.next-button {
+    position: fixed;
+    bottom: 4%;
+    right: 5%;
+}
+
+.back-button {
+    position: fixed;
+    bottom: 4%;
+    left: 30%;
+}
+
+.exit-button {
+    position: fixed;
+    bottom: 4%;
+    right: 18%;
+    display: none;
+}
+
+.exit-button-summary {
+    position: fixed;
+    bottom: 4%;
+    right: 5%;
+}
+
+.refresh-button {
+    float: right;
+    background-color: transparent;
+    border: none;
+    padding: 7px 0px 0px 0px;
+}
+
+.refresh-button:hover {
+    opacity: 0.7;
+}
+
+.refresh-button:active {
+    opacity: 0.2;
+}
+
+.refresh-button img {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+}
+
+/* prerequisites page */
+.prereq-container {
+    display: inline-block;
+    margin-left: 110px;
+    margin-right: auto;
+}
+
+.checking {
+    height: 20px;
+    width: 20px;
+}
+
+.prereq-table {
+    margin: auto auto 10% auto;
+    width: 100%;
+}
+
+.prereq-table td {
+    padding: 5px 20px;
+    text-align: center;
+}
+
+.prereq-table thead {
+    color: #fff;;
+    background: #0087ff;
+}
+
+.prereq-table th {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.prereq-icon {
+  color: #ff6666
+}
+
+/* installation page */
+
+.alert {
+    padding: 10px;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+    border-radius: .3em;
+    border: 1px solid;
+}
+
+.alert.error {
+    color: #D8000C;
+    background-color: #fff;
+    border-color: #D8000C;
+    display: none;
+}
+
+.alert.success {
+    color: #4CAF50;
+    background-color: #fff;
+    border-color: #4CAF50;
+    display: none;
+}
+
+.progress-bar {
+    width: 99%;
+}
+
+.text-area {
+    display: none;
+    max-height: 200px;
+    min-height: 100px;
+    width: 99%;
+    resize: none
+}
+
+/* summary page */
+.info {
+    font-size: 1.4rem;
+    margin-top: 4%;
+    padding: 2px;
+    color: #999;
+    display: none;
+}

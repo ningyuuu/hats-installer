@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/css/skeleton.css" />
+    <link rel="stylesheet" href="../../assets/css/installer.css" />
+</head>
+<body>
+
+<header class="header">
+    <h4>Welcome</h4>
+</header>
+
+<div class="wrapper" id="hats-body">
+    <div id="challenge-sidebar" class="three columns sidebar">
+        <ul class="list-of-challenges">
+            <div class="installation-steps">
+                <h6>Installation Steps</h6>
+            </div>
+            <li>
+                <div id="welcome" data-id="0" class="hats-steps">
+                    <div class="circle">1</div>
+                    <h6>Welcome</h6>
+                </div>
+            </li>
+            <li>
+                <div id="perequisites" data-id="1" class="hats-steps not-done">
+                    <div class="circle">2</div>
+                    <h6>Prerequisites</h6>
+                </div>
+            </li>
+            <li>
+                <div id="installation" data-id="2" class="hats-steps not-done">
+                    <div class="circle">3</div>
+                    <h6>Installation</h6>
+                </div>
+            </li>
+            <li>
+                <div id="summary" data-id="3" class="hats-steps not-done">
+                    <div class="circle">4</div>
+                    <h6>Summary</h6>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content nine columns">
+        <div class="container main-content">
+          <p>This 4-step installer allows you to quickly install the core libraries needed to get started with test automation.</p>
+          <p>Ensure that you have administrator rights to proceed with the installation.</p>
+          <p>If you encounter any problems during installation, please visit
+            <a title="hats" href="https://github.com/GovTechSG/hats-installer" target="_blank">
+              our GitHub repo</a>
+            for more information.
+          </p>
+            <button id='next' class="next-button">Next</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/index.js"></script>
+</body>
+
+</html>

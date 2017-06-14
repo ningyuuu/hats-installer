@@ -1,0 +1,52 @@
+{
+  "name": "hats-installer",
+  "version": "0.1.0",
+  "description": "Installer software for hats: Hive Agile Testing Solution",
+  "productName": "hats installer",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .",
+    "start": "electron .",
+    "test": "standard **/*.js",
+    "build-chals": "node lib/build-challenges.js",
+    "build-pages": "node lib/build-pages.js",
+    "build-zhtw": "node lib/build-challenges.js zhtw",
+    "build-ja": "node lib/build-challenges.js ja",
+    "build-all": "npm run build-chals && npm run build-pages && npm run build-zhtw && npm run build-ja",
+    "pack-mac": "electron-packager . HATS-Installer --platform=darwin --arch=x64   --overwrite --ignore=/out/ --prune=true --out=out  --app-copyright='© 2017 GovTech. All Rights Reserved.",
+    "pack-lin": "electron-packager . HATS-Installer --platform=linux  --arch=x64   --overwrite --ignore=/out/ --prune=true --out=out  --app-copyright='© 2017 GovTech. All Rights Reserved.",
+    "pack-win": "electron-packager . HATS-Installer --platform=win32  --arch=ia32  --overwrite --ignore=/out/ --prune=true --out=out --app-copyright='© 2017 GovTech. All Rights Reserved.'"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "electron-packager": "^8.0.0",
+    "electron-prebuilt": "^1.2.6",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "standard": "^10.0.2"
+  },
+  "dependencies": {
+    "ajv": "^5.1.5",
+    "cheerio": "^0.19.0",
+    "child-process-promise": "^2.2.1",
+    "compare-version": "^0.1.2",
+    "electron": "^1.6.8",
+    "electron-debug": "^1.1.0",
+    "electron-json-storage": "^3.0.5",
+    "electron-log": "^1.1.1",
+    "glob": "^5.0.5",
+    "handlebars": "^3.0.3",
+    "npm-path": "^2.0.3",
+    "promise": "^7.1.1",
+    "random-key": "^0.3.2",
+    "request": "^2.81.0",
+    "semver": "^5.3.0",
+    "sudo-prompt": "^6.2.1",
+    "unzip": "^0.1.11",
+    "username": "^2.2.2"
+  }
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/css/skeleton.css" />
+    <link rel="stylesheet" href="../../assets/css/installer.css" />
+</head>
+<body>
+
+<header class="header">
+    <h4>Installation</h4>
+</header>
+
+<div class="wrapper" id="hats-body">
+    <div id="challenge-sidebar" class="three columns sidebar">
+        <ul class="list-of-challenges">
+            <div class="installation-steps">
+                <h6>Installation Steps</h6>
+            </div>
+            <li>
+                <div id="welcome" data-id="0" class="hats-steps completed">
+                    <div class="circle">1</div>
+                    <h6>Welcome</h6>
+                </div>
+            </li>
+            <li>
+                <div id="prerequisites" data-id="1" class="hats-steps completed">
+                    <div class="circle">2</div>
+                    <h6>Prerequisites</h6>
+                </div>
+            </li>
+            <li>
+                <div id="installation" data-id="2" class="hats-steps current">
+                    <div class="circle">3</div>
+                    <h6>Installation</h6>
+                </div>
+            </li>
+            <li>
+                <div id="summary" data-id="3" class="hats-steps not-done">
+                    <div class="circle">4</div>
+                    <h6>Summary</h6>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="content nine columns">
+        <div class="container main-content">
+            <span id="installingInProgress">
+              <p>Please wait while the  <em>hats</em> libraries are being installed. This may take a few minutes...</p>
+            </span>
+            <div class="halfspace"></div>
+            <div class="alert error" id="errorInstalling">
+                Error installing dependencies
+            </div>
+            <div class="alert success" id="successInstalling">
+                Successfully installed dependencies
+            </div>
+
+            <textarea id="log" rows="5" cols="75" class="text-area" readonly></textarea>
+
+            <button class="back-button" id='back' disabled>Back</button>
+            <button class="next-button" id='next' disabled>Next</button>
+            <button class="exit-button button-danger" id='exit'>Exit</button>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/installation.js"></script>
+</body>
+
+</html>
