@@ -12,7 +12,7 @@ const unzip = require('unzip');
 
 const common = require('./common.js');
 
-const WIN_INSTALL_LOCATION = 'C:\\Program Files (x86)\\hats';
+const WIN_INSTALL_LOCATION = `${common.getX86ProgramFilesDir()}\\hats`;
 const PIP_INSTALL_LIST_PATH = path.join(__dirname, '../lib/install-lists', 'pip-install-list.txt');
 const CMD_PIP_INSTALL = `pip install -r "${PIP_INSTALL_LIST_PATH}"`;
 const CMD_GET_HATS_DIR = 'echo %HATS%';
