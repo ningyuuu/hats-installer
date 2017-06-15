@@ -10,6 +10,7 @@ This is our first step to enable both technical and non-technical people to be a
 
 ##### Operating Systems
 * Windows 7
+* Windows 8.1
 * Windows 10
 
 ##### Browsers
@@ -51,6 +52,14 @@ To contribute, you may follow the steps below:
 5. Create a pull request back here!  
 
 ## Issues
+
+##### Running Powershell scripts
+
+  - In order to run unsigned Powershell scripts, run the following command in a Powershell window with administrator rights
+
+  ```
+  set-executionpolicy remotesigned -force
+  ```
 
 ##### Test page not loading (Internet Explorer)
   - Please refer to [seleniumDriver and IE Driver Wiki](https://github.com/seleniumQuery/seleniumQuery/wiki/seleniumQuery-and-IE-Driver#protected-mode-exception-while-launching-ie-driver) to troubleshoot this issue.
