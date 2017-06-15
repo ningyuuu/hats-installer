@@ -1,6 +1,7 @@
 # hats installer
-
-The *hats* installer installs packages needed to run browsers automated functional test on Windows.
+hats (Hive Agile Testing Solutions) is a functional test automation tool built at Government Digital Services at Hive.  
+With help libraries like Robot Framework, we simplify the testing process and make testing more accessible to everyone.
+hats currently works for web applications and will support mobile devices in the near future.  
 
 ## Motivations
 We are a bunch of passionate quality engineers whom believes in the importance of agile quality engineering practices and delivering quality products or applications.  
@@ -14,14 +15,14 @@ This is our first step to enable both technical and non-technical people to be a
 * Windows 10
 
 ##### Browsers
-* Internet Explorer 10 & 11
+* Internet Explorer 11
 * Google Chrome 54
 * Firefox 54
 
 ## Prerequisites
 * [Node.js 6](https://nodejs.org/en/download) (required to start application).
 * [jdk8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) for [Selenium](http://www.seleniumhq.org/).
-* [python2.7](https://www.python.org/downloads/) for the [Robot framework](http://robotframework.org/).
+* [python2.7](https://www.python.org/downloads/)
 * pip (Included in python >=2.7.9).
 
 ## Development setup

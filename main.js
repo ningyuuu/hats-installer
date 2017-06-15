@@ -49,7 +49,8 @@ app.on('ready', () => {
     title: version()
   });
   mainWindow.loadURL(`file://${__dirname}/src/html/index.html`);
-  // mainWindow.webContents.openDevTools({ mode: 'detach' });
+
+  if (process.argv[2] === 'debug') mainWindow.webContents.openDevTools({ mode: 'detach' });
 
   ipcMain.on('sendPrereqState', (event, data) => {
     log.info('In main.js sendPrereqState');
