@@ -11,6 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   (function callPwdOnExecSync() {
     // useless call to init child_process early to allow java elements to load
-    log.info('pwd: ', execSync('pwd', { encoding: 'utf8' }));
+    log.info('cd: ', execSync('cd .', { encoding: 'utf8' }));
   }());
 });
