@@ -26,7 +26,7 @@ const WIN7_X86_REG_PATCH = 'REG ADD "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\In
 const drivers = [
   'https://chromedriver.storage.googleapis.com/2.29/chromedriver_win32.zip',
   'http://selenium-release.storage.googleapis.com/3.4/IEDriverServer_Win32_3.4.0.zip',
-  'https://github.com/mozilla/geckodriver/releases/download/v0.16.0/geckodriver-v0.16.0-win32.zip'
+  'https://github.com/mozilla/geckodriver/releases/download/v0.16.1/geckodriver-v0.16.1-win32.zip'
 ];
 
 const utils = {};
