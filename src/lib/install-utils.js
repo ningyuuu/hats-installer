@@ -20,13 +20,16 @@ const CMD_SET_SYS_ENV_PATH = 'setx PATH "%path%;%HATS%" /M';
 const drivers = [
   'https://chromedriver.storage.googleapis.com/2.29/chromedriver_win32.zip',
   'http://selenium-release.storage.googleapis.com/3.4/IEDriverServer_Win32_3.4.0.zip',
-  'https://github.com/mozilla/geckodriver/releases/download/v0.14.0/geckodriver-v0.14.0-win32.zip'
+  'https://github.com/mozilla/geckodriver/releases/download/v0.16.0/geckodriver-v0.16.0-win32.zip'
 ];
 
 const utils = {};
 
 utils.unzipUrlAsStream = url => (
-    request(url)
+    request({
+      followAllRedirects: true, 
+      url: url
+    })
       .pipe(unzip.Extract({
         path: WIN_INSTALL_LOCATION
       }))

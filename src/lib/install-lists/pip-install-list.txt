@@ -27,7 +27,7 @@ robotframework-databaselibrary==0.8.1
 robotframework-faker==3.0.0
 robotframework-selenium2library==1.7.3
 sauceclient==0.2.1
-selenium==3.0.2
+selenium==3.4.0
 setupfiles==0.0.14
 setuptools-scm==1.15.0
 six==1.10.0
