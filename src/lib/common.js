@@ -29,6 +29,15 @@ const execAsyncCommand = command => new Promise((resolve, reject) => {
   });
 });
 
+// returns path to program files for a 32-bit program
+// e.g 'C:\\Program Files' on x86, 'C:\\Program Files (x86)' on x64
+const getX86ProgramFilesDir = () => {
+  // the program files (x86) environment var doesn't exist on 32-bit systems
+  // if it doesn't exist, this must be a 32-bit system
+  const programFilesX86 = process.env['programfiles(x86)'];
+  return programFilesX86 || process.env.programfiles;
+};
+
 const version = () => {
   const info = JSON.parse(fs.readFileSync('package.json', 'utf8'));
   return `${info.productName} v${info.version || '0.0.1'}`;
@@ -36,5 +45,6 @@ const version = () => {
 
 module.exports = {
   execAsyncCommand,
+  getX86ProgramFilesDir,
   version
 };
