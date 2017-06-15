@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ' results will appear shortly. If the results page is in green, the installation has been' +
     ' successful.';
     elements.testInProgMsg.style.display = 'block';
-    execSync(`xcopy "${currTestDir}\\*" "${destTestDir}" /o /x /H /E /I /Y`, { encoding: 'utf8' });
+    execSync(`xcopy "${currTestDir}\\*" "${destTestDir}" /H /E /I /Y`, { encoding: 'utf8' });
 
     try {
       execSync('echo ;%PATH%;', { encoding: 'utf8' });
