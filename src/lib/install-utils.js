@@ -69,8 +69,6 @@ utils.extractBrowserDrivers = () => {
   }
 };
 
-const isWin7 = () => os.platform() === 'win32' && /^6\.1/.test(os.release());
-
 // returns 32 or 64, depending on the OS's architecture
 const getBitness = () => {
   const output = childProcess.execSync('wmic OS get OSArchitecture | findstr bit').toString();
@@ -81,9 +79,11 @@ const getBitness = () => {
   return bitness;
 };
 
-// Applies a registry patch so that tests run on Win7 IE
+// Applies a registry patch so that tests run on Win7/8/8.1 IE
 const applyIePatchIfRequired = () => new Promise((resolve, reject) => {
-  if (isWin7()) {
+  const osVer = os.release();
+  const isPatchRequired = os.platform() === 'win32' && /^6\.(1|2)/.test(osVer);
+  if (isPatchRequired) {
     let cmd = '';
     switch (getBitness()) {
       case 32:
