@@ -16,6 +16,7 @@ This is our first step to enable both technical and non-technical people to be a
 ##### Browsers
 * Internet Explorer 10 & 11
 * Google Chrome 54
+* Firefox 54
 
 ## Prerequisites
 * [Node.js 6](https://nodejs.org/en/download) (required to start application).
