@@ -1,4 +1,6 @@
-module.exports = function menu(mainWindow) {
+const electron = require('electron');
+
+module.exports = function menu() {
   const otherMenu = [
     {
       label: 'hats',
@@ -6,20 +8,19 @@ module.exports = function menu(mainWindow) {
         {
           label: 'Contact',
           click() {
-            require('electron').shell.openExternal('mailto:hats.supp@gmail.com');
-          },
+            electron.shell.openExternal('mailto:hats.supp@gmail.com');
+          }
         },
         {
           label: 'Quit',
           accelerator: 'CmdOrCtrl+Q',
           click() {
-            const electron = require('electron');
             const app = electron.app;
             app.quit();
-          },
-        },
-      ],
-    },
+          }
+        }
+      ]
+    }
   ];
   return otherMenu;
 };

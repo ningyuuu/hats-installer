@@ -1,3 +1,5 @@
+const { shell } = require('electron');
+
 module.exports = function menu(app, mainWindow) {
   const darwinMenu = [
     {
@@ -5,20 +7,20 @@ module.exports = function menu(app, mainWindow) {
       submenu: [
         {
           label: 'About HATS',
-          selector: 'orderFrontStandardAboutPanel:',
+          selector: 'orderFrontStandardAboutPanel:'
         },
         {
-          type: 'separator',
+          type: 'separator'
         },
         {
-          type: 'separator',
+          type: 'separator'
         },
         {
           label: 'Quit',
           accelerator: 'Command+Q',
-          click() { app.quit(); },
-        },
-      ],
+          click() { app.quit(); }
+        }
+      ]
     },
 
     {
@@ -30,7 +32,7 @@ module.exports = function menu(app, mainWindow) {
         { label: 'Cut', accelerator: 'CmdOrCtrl+X', selector: 'cut:' },
         { label: 'Copy', accelerator: 'CmdOrCtrl+C', selector: 'copy:' },
         { label: 'Paste', accelerator: 'CmdOrCtrl+V', selector: 'paste:' },
-        { label: 'Select All', accelerator: 'CmdOrCtrl+A', selector: 'selectAll:' },
+        { label: 'Select All', accelerator: 'CmdOrCtrl+A', selector: 'selectAll:' }
       ] },
     {
       label: 'View',
@@ -40,19 +42,19 @@ module.exports = function menu(app, mainWindow) {
           accelerator: 'CmdOrCtrl+R',
           click(item, focusedWindow) {
             if (focusedWindow) focusedWindow.reload();
-          },
+          }
         },
         {
           label: 'Toggle Full Screen',
           accelerator: 'Ctrl+Command+F',
-          click() { mainWindow.setFullScreen(!mainWindow.isFullScreen()); },
+          click() { mainWindow.setFullScreen(!mainWindow.isFullScreen()); }
         },
         {
           label: 'Toggle Developer Tools',
           accelerator: 'Alt+Command+I',
-          click() { mainWindow.toggleDevTools(); },
-        },
-      ],
+          click() { mainWindow.toggleDevTools(); }
+        }
+      ]
     },
 
 
@@ -61,10 +63,10 @@ module.exports = function menu(app, mainWindow) {
       submenu: [
         {
           label: 'Repository',
-          click() { require('shell').openExternal('https://github.com/syamsasi99'); },
-        },
-      ],
-    },
+          click() { shell.openExternal('https://github.com/syamsasi99'); }
+        }
+      ]
+    }
   ];
   return darwinMenu;
 };

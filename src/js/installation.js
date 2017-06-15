@@ -45,16 +45,6 @@ const enableNextBtn = () => {
   elements.nextBtn.disabled = false;
 };
 
-const disableBackBtn = () => {
-  console.log('disabling back');
-  elements.backBtn.disabled = true;
-};
-
-const enableBackBtn = () => {
-  console.log('enabling back');
-  elements.backBtn.disabled = false;
-};
-
 // sequences
 const updateUiOnInstallSuccess = () => {
   elements.exitBtn.style.display = 'none';

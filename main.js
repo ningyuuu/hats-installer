@@ -1,22 +1,22 @@
 
 // The main.js, execution starts from here
-const path = require('path');
+// const path = require('path');
 const electron = require('electron');
 const log = require('electron-log');
 const storage = require('electron-json-storage');
 
 const { app, BrowserWindow } = electron;
-const Menu = electron.Menu;
+// const Menu = electron.Menu;
 const ipcMain = electron.ipcMain;
 
 // For the Toolbar menu
-const darwinTemplate = require('./src/lib/menus/darwin-menu.js');
-const otherTemplate = require('./src/lib/menus/other-menu.js');
+// const darwinTemplate = require('./src/lib/menus/darwin-menu.js');
+// const otherTemplate = require('./src/lib/menus/other-menu.js');
 
 const { version } = require('./src/lib/common');
 
 let mainWindow = null;
-const menu = null;
+// const menu = null;
 let thePrereqMap = null;
 const winWidth = 800;
 const winHeight = 630;
