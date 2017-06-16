@@ -287,6 +287,14 @@ p {
     display: none;
 }
 
+.alert.close-app {
+    padding: 4px 4px 4px 10px;
+    margin-right: 5px;
+    color: #808080;
+    border-color: #808080;
+    display: none;
+}
+
 .progress-bar {
     width: 99%;
 }

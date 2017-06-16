@@ -30,7 +30,9 @@ const elements = {
   appium: document.getElementById('appium'),
 
   checkWeb: document.getElementById('webImg'),
-  checkMobile: document.getElementById('mobileImg')
+  checkMobile: document.getElementById('mobileImg'),
+
+  willCloseApp: document.getElementById('willCloseApp')
 };
 
 const modules = {
@@ -75,6 +77,11 @@ const enableInstallBtn = () => {
 const disableBackBtn = () => {
   console.log('disabling back');
   elements.back.disabled = true;
+};
+
+const showWillCloseAppMsg = () => {
+  log.info('showing message that installer will close');
+  elements.willCloseApp.style.display = 'block';
 };
 
 // sequences
@@ -179,12 +186,10 @@ const confirmPrereqsInstallationPrompt = () => {
 
 const showPrereqInstallationSuccess = () => {
   const options = {
-    type: 'info',
-    buttons: ['OK'],
+    type: 'warning',
+    buttons: ['Exit'],
     title: 'Prerequisite Installation Successful',
-    message: 'Prerequisites have been installed. hats installer will now close. '
-      + 'When this happens, please close all instances of the command prompt and restart hats installer '
-      + 'so as to allow detection of prerequisites.'
+    message: 'Please close all instances of the command prompt and restart hats installer.'
   };
 
   return dialog.showMessageBox(options);
@@ -203,6 +208,7 @@ const activateNextOrPromptInstalls = () => {
     const choice = confirmPrereqsInstallationPrompt();
     if (choice === 0) {
       disableBackBtn();
+      showWillCloseAppMsg();
       const isJavaRequired = !installedChecks.javaInstalled;
       const isPythonOrPipRequired = !(installedChecks.pythonInstalled
           && installedChecks.pipInstalled);
