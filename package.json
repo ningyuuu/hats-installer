@@ -6,9 +6,10 @@
   "main": "main.js",
   "private": true,
   "scripts": {
+    "start": "node start.js",
     "lint": "eslint .",
-    "start": "electron .",
     "debug": "electron . debug",
+    "nouac": "electron .",
     "test": "standard **/*.js",
     "build-chals": "node lib/build-challenges.js",
     "build-pages": "node lib/build-pages.js",
@@ -22,7 +23,6 @@
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "electron-packager": "^8.0.0",
-    "electron-prebuilt": "^1.2.6",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-plugin-import": "^2.2.0",
@@ -41,6 +41,7 @@
     "electron-log": "^1.1.1",
     "glob": "^5.0.5",
     "handlebars": "^3.0.3",
+    "node-windows": "^0.1.14",
     "npm-path": "^2.0.3",
     "promise": "^7.1.1",
     "random-key": "^0.3.2",
