@@ -3,6 +3,7 @@
 const Promise = require('promise');
 const spawn = require('child_process').spawn;
 const fs = require('fs');
+const path = require('path');
 
 // executes a command asynchronously by spawning a new shell process
 const execAsyncCommand = command => new Promise((resolve, reject) => {
@@ -30,6 +31,7 @@ const execAsyncCommand = command => new Promise((resolve, reject) => {
 });
 
 const version = () => {
+  console.log(path.resolve(__dirname, '..', '..', 'package.json'));
   const info = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'package.json'), 'utf8'));
   return `${info.productName} v${info.version || '0.0.1'}`;
 };
