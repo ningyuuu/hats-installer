@@ -22,10 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // copy testpage folder to windows temp folder + show message testing in progress
   elements.test.onclick = () => {
-    elements.testInProgMsg.innerHTML = 'A sample test script has been executed and the test' +
-    ' results will appear shortly. If the results page is in green, the installation has been' +
-    ' successful.';
-    elements.testInProgMsg.style.display = 'block';
     execSync(`xcopy "${currTestDir}\\*" "${destTestDir}" /H /E /I /Y`, { encoding: 'utf8' });
 
     try {

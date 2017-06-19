@@ -82,6 +82,8 @@ const disableBackBtn = () => {
 const showWillCloseAppMsg = () => {
   log.info('showing message that installer will close');
   elements.willCloseApp.style.display = 'block';
+  elements.back.style.display = 'none';
+  elements.install.style.display = 'none';
 };
 
 // sequences
