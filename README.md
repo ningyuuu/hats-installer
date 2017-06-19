@@ -38,6 +38,14 @@ npm start
 ```
 
 
+## Running a test
+1. Open a command prompt
+2. Run the sample test script
+```
+pybot src/testpage/test.robot
+```
+
+
 ## Contributions
 We welcome your involvement, be it fixing bugs or implementing new features that you find relevant to this project.
 
