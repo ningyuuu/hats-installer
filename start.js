@@ -8,4 +8,4 @@ console.log(path.resolve(__dirname, 'node_modules', 'electron'));
 const dirname = path.resolve(__dirname);
 console.log(__dirname);
 
-wincmd.elevate('electron '+dirname, {cwd: path.resolve(__dirname, 'node_modules', 'electron')});
+wincmd.elevate('electron '+dirname, {cwd: path.resolve(__dirname, 'node_modules', '.bin')});
