@@ -2,27 +2,22 @@
 The *hats* installer installs packages needed to run browsers automated functional test on Windows.
 Simplifies the steps to setup test environment in Windows.
 
-
 ## Motivation
 We believe that agile quality practices accelerate the delivery of quality applications.
 To deal with a growing test backlog, test automation is a more scalable and cost-effective approach.
 
 As a group of passionate quality engineers, we want to lower the barrier of entry to web app test automation so that everyone can contribute to software quality.
 
-
 ## Supported Platforms
 *hats* has been tested on the following platforms:
 
 ##### Operating Systems
-* Windows 7
-* Windows 8.1
 * Windows 10
 
 ##### Browsers
 * Internet Explorer 11
 * Google Chrome 54
 * Firefox 54
-
 
 ## Development setup
 1. Install [git](https://git-scm.com/downloads)
@@ -44,7 +39,6 @@ npm start
 ```
 pybot src/testpage/test.robot
 ```
-
 
 ## Contributions
 We welcome your involvement, be it fixing bugs or implementing new features that you find relevant to this project.
