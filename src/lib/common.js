@@ -30,7 +30,7 @@ const execAsyncCommand = command => new Promise((resolve, reject) => {
 });
 
 const version = () => {
-  const info = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  const info = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'package.json'), 'utf8'));
   return `${info.productName} v${info.version || '0.0.1'}`;
 };
 
