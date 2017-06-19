@@ -1,120 +1,122 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../../assets/css/normalize.css" />
-    <link rel="stylesheet" href="../../assets/css/skeleton.css" />
-    <link rel="stylesheet" href="../../assets/css/installer.css" />
-    <link rel="stylesheet" href="../../assets/font-awesome-4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../assets/css/normalize.css" />
+  <link rel="stylesheet" href="../../assets/css/skeleton.css" />
+  <link rel="stylesheet" href="../../assets/css/installer.css" />
+  <link rel="stylesheet" href="../../assets/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
 <header id="challenge-header" class="header">
-    <h4>Prerequisites</h4>
+  <h4>Prerequisites</h4>
 </header>
 
 <div class="wrapper" id="hats-body">
-    <div id="challenge-sidebar" class="three columns sidebar">
-        <ul class="list-of-challenges">
-            <div class="installation-steps">
-                <h6>Installation Steps</h6>
-            </div>
-            <li>
-                <div id="welcome" data-id="0" class="hats-steps completed">
-                    <div class="circle">1</div>
-                    <h6>Welcome</h6>
-                </div>
-            </li>
-            <li>
-                <div id="prerequisites" data-id="1" class="hats-steps">
-                    <div class="circle">2</div>
-                    <div class="current-arrow"></div>
-                    <h6>Prerequisites</h6>
-                </div>
-            </li>
-            <li>
-                <div id="installation" data-id="2" class="hats-steps not-done">
-                    <div class="circle not-done">3</div>
-                    <div class="current-arrow"></div>
-                    <h6>Installation</h6>
-                </div>
-            </li>
-            <li>
-                <div id="summary" data-id="3" class="hats-steps not-done">
-                    <div class="circle not-done">4</div>
-                    <div class="current-arrow"></div>
-                    <h6>Summary</h6>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-    <div class="content nine columns">
-        <div class="container main-content">
-            <div class="prereq-container">
-                <h4>Product Information</h4>
-                <table class="prereq-table" id="submod_table">
-                    <thead>
-                    <tr>
-                        <th colspan="2" class="text-left">Available Module(s)</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="submod" id="web">Web <i id="webImg" src=""></td>
-                        <td class="submod" id="mobile" title="Coming soon!">
-                            Mobile
-                            <img id="mobileImg" src="">
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                <button class="refresh-button" id="refresh">
-                    <i aria-label="Refresh" class="fa fa-refresh fa-2x refresh-button"></i>
-                </button>
-                <h4>Prerequisites</h4>
-                <table class="prereq-table" id="prereq_table">
-                    <thead>
-                    <tr>
-                        <th class="text-left">Modules</th>
-                        <th class="text-left">Status</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="text-left">Java 1.8</td>
-                        <td class="text-left">
-                            <i id="java" aria-label="Loading" class="fa fa-circle-o-notch fa-spin fa-lg fa-fw prereq-icon"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-left">Python 2.7</td>
-                        <td class="text-left">
-                            <i id="python" aria-label="Loading" class="fa fa-circle-o-notch fa-spin fa-lg fa-fw prereq-icon"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-left">PIP</td>
-                        <td class="text-left">
-                            <i id="pip" aria-label="Loading" class="fa fa-circle-o-notch fa-spin fa-lg fa-fw prereq-icon"></i>
-                        </td>
-                    </tr>
-
-                    </tbody>
-                </table>
-            </div>
-            <div class="alert close-app" id="willCloseApp">
-                The installer will close when the prerequisites have been installed.
-            </div>
+  <div id="challenge-sidebar" class="three columns sidebar">
+    <ul class="list-of-challenges">
+      <div class="installation-steps">
+        <h6>Installation Steps</h6>
+      </div>
+      <li>
+        <div id="welcome" data-id="0" class="hats-steps completed">
+          <div class="circle">1</div>
+          <h6>Welcome</h6>
         </div>
-        <div class="space"></div>
-        <button id='back' class="back-button">Back</button>
-        <!--<img id="installing" class="checking" src="./assets/imgs/loading.gif"></img>-->
-        <button id='install' class="next-button button-standard" disabled>Install</button>
-
-        <div id="footer">
+      </li>
+      <li>
+        <div id="prerequisites" data-id="1" class="hats-steps">
+          <div class="circle">2</div>
+          <div class="current-arrow"></div>
+          <h6>Prerequisites</h6>
         </div>
+      </li>
+      <li>
+        <div id="installation" data-id="2" class="hats-steps not-done">
+          <div class="circle not-done">3</div>
+          <div class="current-arrow"></div>
+          <h6>Installation</h6>
+        </div>
+      </li>
+      <li>
+        <div id="summary" data-id="3" class="hats-steps not-done">
+          <div class="circle not-done">4</div>
+          <div class="current-arrow"></div>
+          <h6>Summary</h6>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content nine columns">
+    <div class="container main-content">
+      <div class="prereq-container">
+        <h4>Product Information</h4>
+        <table class="prereq-table" id="submod_table">
+          <thead>
+          <tr>
+            <th colspan="2" class="text-left">Available Module(s)</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="submod" id="web">Web <i id="webImg" src=""></td>
+            <td class="submod" id="mobile" title="Coming soon!">
+              Mobile
+              <img id="mobileImg" src="">
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        <button class="refresh-button" id="refresh">
+          <i aria-label="Refresh" class="fa fa-refresh fa-2x refresh-button"></i>
+        </button>
+        <h4>Prerequisites</h4>
+        <table class="prereq-table" id="prereq_table">
+          <thead>
+          <tr>
+            <th class="text-left">Modules</th>
+            <th class="text-left">Status</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="text-left">Java 1.8</td>
+            <td class="text-left">
+              <i id="java" aria-label="Loading" class="fa fa-circle-o-notch fa-spin fa-lg fa-fw prereq-icon"></i>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-left">Python 2.7</td>
+            <td class="text-left">
+              <i id="python" aria-label="Loading" class="fa fa-circle-o-notch fa-spin fa-lg fa-fw prereq-icon"></i>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-left">PIP</td>
+            <td class="text-left">
+              <i id="pip" aria-label="Loading" class="fa fa-circle-o-notch fa-spin fa-lg fa-fw prereq-icon"></i>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="alert close-app" id="willCloseApp">
+        The installer will close when the prerequisites have been installed.
+      </div>
     </div>
+    <div class="space"></div>
+    <button id='back' class="back-button">Back</button>
+    <button id='install' class="next-button button-standard" disabled>Install</button>
+
+    <div id="footer">
+    </div>
+  </div>
 </div>
 <script type="text/javascript" src="../js/prerequisites.js"></script>
 </body>
+
 </html>

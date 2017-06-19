@@ -2,30 +2,32 @@
 Documentation     A test suite with a single test for Beanie
 ...               Created by Robot Extension
 Library           Selenium2Library    timeout=10
-Library				    OperatingSystem
+Library           OperatingSystem
 
 *** Variables ***
-#${BROWSER}    ie
+${IE_EXISTS}        True
+${CHROME_EXISTS}    True
+${FF_EXISTS}        True
 
 *** Test Cases ***
 Beanie test using Internet Explorer
-	Log    %{path}%
-	Log    ${CURDIR}
-	Run Keyword If    ${IE_EXISTS}    Beanie test    ie
+  Log    ${CURDIR}
+  Run Keyword If    ${IE_EXISTS}    Beanie test  ie
+  ...         ELSE     Log  IE is not installed
 
 Beanie test using Chrome
-	Log    %{path}%
-	Log    ${CURDIR}
-	Run Keyword If    ${CHROME_EXISTS}    	Beanie test    chrome
+  Log    ${CURDIR}
+  Run Keyword If    ${CHROME_EXISTS}    Beanie test   chrome
+  ...         ELSE     Log  Chrome is not installed
 
 Beanie test using Firefox
-	Log    %{path}%
-	Log    ${CURDIR}
-	Run Keyword If    ${FF_EXISTS}    	Beanie test    ff
+  Log    ${CURDIR}
+  Run Keyword If    ${FF_EXISTS}    Beanie test  ff
+  ...         ELSE     Log  Firefox is not installed
 
 *** Keywords ***
 Beanie test
-	[Arguments]    ${browser}
+  [Arguments]    ${browser}
   Open Browser  file://${TEMPDIR}/testpage/Beanie.html  ${browser}
   Wait Until Page Contains Element  //i[@id="link-edit-1-i"]
   Click Element  //i[@id="link-edit-1-i"]
@@ -34,4 +36,3 @@ Beanie test
   Wait Until Page Contains Element  //button[@name="button"]
   Click Element  //button[@name="button"]
   Close Browser
-  #Open Browser  file://C:/Users/devops/AppData/Local/Temp/testpage/temp.html  ${BROWSER}
