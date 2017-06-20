@@ -1,4 +1,3 @@
-
 // The main.js, execution starts from here
 const electron = require('electron');
 const log = require('electron-log');
@@ -29,7 +28,9 @@ app.on('ready', () => {
   // to clear state from previous runs
   // Putting this during shutdown won't work since this function executes asynchronously
   storage.clear((err) => {
-    if (err) { console.log(err); }
+    if (err) {
+      console.log(err);
+    }
   });
 
   mainWindow = new BrowserWindow({
@@ -71,6 +72,21 @@ app.on('ready', () => {
   });
 
   mainWindow.setMenu(null);
+
+  mainWindow.on('close', (e) => {
+    const options = {
+      type: 'question',
+      buttons: ['Yes', 'No'],
+      title: 'Close Window',
+      message: 'hats-installer will now close. Are you sure?'
+    };
+
+    const choice = electron.dialog.showMessageBox(options);
+
+    if (choice === 1) {
+      e.preventDefault();
+    }
+  });
 
   mainWindow.on('closed', () => {
     log.info('In main.js closed');

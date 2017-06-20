@@ -19,19 +19,16 @@ As a group of passionate quality engineers, we want to lower the barrier of entr
 * Google Chrome 54
 * Firefox 54
 
+## User setup
+1. Download the latest [release](https://github.com/GovTechSG/hats-installer/release)
+2. Unzip the package
+3. Run run.bat
+
 ## Development setup
 1. Install [git](https://git-scm.com/downloads)
 2. Install [Node.js](https://nodejs.org/en/download)
 3. Clone the repo
-4. Install dependencies
-```
-npm install
-```
-5. Run application **using PowerShell(admin mode)**
-```
-npm start
-```
-
+4. Use `run.bat` to launch the application.
 
 ## Running a test
 1. Open a command prompt

@@ -1,0 +1,1 @@
+npm install && powershell start-process powershell -verb runas -ArgumentList "{-NoExit -Command $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User');  echo $env:path; cd '%cd%'; npm start;exit}"
