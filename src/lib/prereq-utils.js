@@ -143,11 +143,9 @@ utils.checkPrereqInstalled = function (installedChecks, elements) {
 utils.installPrereqs = (isJavaRequired, isPythonOrPipRequired) =>
   common.execAsyncCommand(CMD_INSTALL_CHOCOLATEY)
     .then((stdout) => {
-      console.log(stdout);
       return isJavaRequired ? common.execAsyncCommand(CMD_INSTALL_JDK8) : Promise.resolve();
     })
     .then((stdout) => {
-      console.log(stdout);
       return isPythonOrPipRequired ? common.execAsyncCommand(CMD_INSTALL_PYTHON2_X86)
         : Promise.resolve();
     });
